@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Banner from "./Banner";
 import Card from "./Card";
 import Footer from "./Footer";
+import FAQ from "./FAQ";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
                 cards.map(card => <Card key={card.id} card={card}></Card>)
             }
            </div>
+           <FAQ></FAQ>
             <Footer></Footer>
         </div>
     );
