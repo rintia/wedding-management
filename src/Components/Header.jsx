@@ -5,11 +5,17 @@ const Header = () => {
     const navLinks = <>
      <li> <NavLink style={({ isActive }) => ({
             color: isActive ? "#630A10" : 'black',
-            background: '#FCF0C8',
+            background: isActive ? '#FCF0C8' : 'white'
             })}
              to='/' >Home</NavLink> </li>
-    <li><NavLink to='/login'>login</NavLink></li>
-    <li><NavLink to='/register'>Register</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+            color: isActive ? "#630A10" : 'black',
+            background: isActive ? '#FCF0C8' : 'white'
+            })} to='/login'>login</NavLink></li>
+    <li><NavLink style={({ isActive }) => ({
+            color: isActive ? "#630A10" : 'black',
+            background: isActive ? '#FCF0C8' : 'white'
+            })} to='/register'>Register</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -22,7 +28,10 @@ const Header = () => {
         {navLinks}
       </ul>
     </div>
+    <div className="flex">
+    <img src="/logo.png" className="w-16" alt="" />
     <a className="btn btn-ghost font-cursive font-bold normal-case text-dark text-4xl">Wedding Knot</a>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -30,8 +39,10 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link><a className="btn">Login</a></Link>
-    <Link><a className="btn">Register</a></Link>
+    <NavLink style={({ isActive }) => ({
+            fontStyle: isActive ? 'underline' : 'none'
+            })} to='/login'><a className="text-dark font-semibold mr-4" href="">Login</a></NavLink>
+    <Link to='/register'><a className="text-dark font-semibold" href="">Register</a></Link>
     
   </div>
 </div>
