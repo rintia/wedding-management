@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
+import { useContext } from "react";
 
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext)
     const navLinks = <>
      <li> <NavLink style={({ isActive }) => ({
             color: isActive ? "#630A10" : 'black',
@@ -17,6 +20,11 @@ const Header = () => {
             background: isActive ? '#FCF0C8' : 'white'
             })} to='/register'>Register</NavLink></li>
     </>
+    const handleLogOut =() => {
+      logOut()
+      .then(() => console.log('sign out successfully'))
+      .catch(error => console.log(error))
+   }
     return (
         <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -39,10 +47,14 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <NavLink style={({ isActive }) => ({
-            fontStyle: isActive ? 'underline' : 'none'
-            })} to='/login'><a className="text-dark font-semibold mr-4" href="">Login</a></NavLink>
-    <Link to='/register'><a className="text-dark font-semibold" href="">Register</a></Link>
+    { user ? <a onClick={handleLogOut} className="btn">Sign Out</a> 
+    :
+     <div>
+      <Link to='/login'><a className="text-dark font-semibold mr-4" href="">Login</a></Link>
+     <Link to='/register'><a className="text-dark font-semibold" href="">Register</a></Link>
+     </div>
+    }
+   
     
   </div>
 </div>
