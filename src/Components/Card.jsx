@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Card = ({card}) => {
     const{id, name, price, short_description, image} = card;
@@ -10,7 +11,7 @@ const Card = ({card}) => {
     <p>{short_description}</p>
     <p><span className='text-dark'>Price: </span>${price}</p>
     <div className="card-actions justify-end">
-      <button className="btn border-none hover:bg-dark hover:text-light bg-light text-dark btn-primary">View Details</button>
+     <Link to={`/card/${id}`}> <button className="btn border-none hover:bg-dark hover:text-light bg-light text-dark btn-primary">View Details</button></Link>
     </div>
   </div>
 </div>
