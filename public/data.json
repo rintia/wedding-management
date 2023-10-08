@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Wedding Venues",
-      "image": "wedding_venues.jpg",
+      "image": "https://i.ibb.co/fqWbPL7/venue1.jpg",
       "short_description": "Charming venues for your big day. Perfect settings for your dream wedding.",
       "price": 3500,
       "service_details": "Choose from a variety of stunning wedding venues to create cherished memories with your loved ones.",
@@ -30,7 +30,7 @@
     {
       "id": 2,
       "name": "Wedding Catering",
-      "image": "wedding_catering.jpg",
+      "image": "https://i.ibb.co/vVzmRtZ/food1.png",
       "short_description": "Delicious cuisine for your guests. Memorable dining experiences.",
       "price": 2500,
       "service_details": "Customizable catering menu to satisfy your guests' palates and create lasting culinary memories.",
@@ -58,7 +58,7 @@
     {
       "id": 3,
       "name": "Wedding Photography",
-      "image": "wedding_photography.jpg",
+      "image": "https://i.ibb.co/ZcQBzHF/photography1.jpg",
       "short_description": "Capture memories with style. Beautifully preserved moments.",
       "price": 1500,
       "service_details": "Full-day coverage and beautifully edited wedding photos to cherish for a lifetime.",
@@ -86,7 +86,7 @@
     {
       "id": 4,
       "name": "Floral Arrangements",
-      "image": "floral_arrangements.jpg",
+      "image": "https://i.ibb.co/Yh71K7H/floral1.jpg",
       "short_description": "Elegant flowers for your wedding. Stunning floral creations.",
       "price": 800,
       "service_details": "Custom floral designs to match your theme and colors, creating a visually breathtaking atmosphere.",
@@ -114,7 +114,7 @@
     {
       "id": 5,
       "name": "Wedding Makeup",
-      "image": "wedding_makeup.jpg",
+      "image": "https://i.ibb.co/f22450N/makeip1.webp",
       "short_description": "Flawless makeup for brides. Enhance your natural beauty.",
       "price": 1200,
       "service_details": "Professional makeup artists to enhance your beauty on your big day, ensuring you look radiant.",
@@ -142,7 +142,7 @@
     {
       "id": 6,
       "name": "Wedding Attire",
-      "image": "wedding_attire.jpg",
+      "image": "https://i.ibb.co/6R3RgwP/attire1.jpg",
       "short_description": "Elegant attire for your special day. Beautiful wedding fashion.",
       "price": 1800,
       "service_details": "Designer wedding attire for brides, grooms, and bridal parties, ensuring you look your best.",
