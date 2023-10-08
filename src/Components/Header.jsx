@@ -47,11 +47,21 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    { user ? <a onClick={handleLogOut} className="btn">Sign Out</a> 
+    { user ? 
+     <div className="flex items-center">
+      <h1>{user.displayName}</h1>
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+     <div className="w-10 rounded-full">
+       <img src={user.photoURL} />
+     </div>
+   </label>
+   <a onClick={handleLogOut} className="btn">Sign Out</a> 
+   </div> 
+   
     :
-     <div>
-      <Link to='/login'><a className="text-dark font-semibold mr-4" href="">Login</a></Link>
-     <Link to='/register'><a className="text-dark font-semibold" href="">Register</a></Link>
+     <div className="flex">
+      <Link to='/login'><h1 className="text-dark font-semibold mr-4" href="">Login</h1></Link>
+     <Link to='/register'><h1 className="text-dark font-semibold" href="">Register</h1></Link>
      </div>
     }
    

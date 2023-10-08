@@ -1,12 +1,12 @@
 import { AuthContext } from "./AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useContext } from "react";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const {signInUser} = useContext(AuthContext)
-    const navigate = useNavigate()
+    
       const handleLogin = e => {
           e.preventDefault();
           const email = e.target.email.value;
@@ -14,13 +14,16 @@ const Login = () => {
           console.log(email, password)
           signInUser(email, password)
           .then(result=> {
-            toast('Successfully toasted!')
+            toast.success('Successfully logged in')
             console.log(result.user)
             e.target.reset();
-            navigate('/')
-  
+            
           })
-          .catch(error =>console.error(error))
+          .catch(error =>{
+            console.error(error)
+            toast.warning(error.message)
+        })
+
       }
     return (
         <div className="hero min-h-screen bg-base-200">

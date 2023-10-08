@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
     const {createUser, signInWithGoogle} = useContext(AuthContext);
-    const [registerError, setRegisterError] = useState('');
+   
     
     const handleGoogleSignIn = () => {
         signInWithGoogle()
@@ -20,7 +20,6 @@ const Register = () => {
         const name = e.target.name.value;
         const password = e.target.password.value;
         console.log(name, email, password);
-        setRegisterError('');
         if(password.length < 6){
             toast.warning('Password should be 6 character or longer')
             return;
@@ -36,6 +35,7 @@ const Register = () => {
           }
         createUser(email, password)
         .then(result => {
+            toast.success('Registered Successfully')
               console.log(result.user)
             
         })
@@ -56,6 +56,12 @@ const Register = () => {
             <span className="label-text">Your Name</span>
           </label>
           <input type="text" name="name" placeholder="your name" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Your Photo</span>
+          </label>
+          <input type="text" name="name" placeholder="your photo url" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
