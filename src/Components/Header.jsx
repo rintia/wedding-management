@@ -3,7 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
     const navLinks = <>
-    <li><NavLink to='/'>Home</NavLink></li>
+     <li> <NavLink style={({ isActive }) => ({
+            color: isActive ? "#630A10" : 'black',
+            background: '#FCF0C8',
+            })}
+             to='/' >Home</NavLink> </li>
     <li><NavLink to='/login'>login</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li>
     </>
@@ -18,7 +22,7 @@ const Header = () => {
         {navLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">Wedding Knot</a>
+    <a className="btn btn-ghost font-cursive font-bold normal-case text-dark text-4xl">Wedding Knot</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
