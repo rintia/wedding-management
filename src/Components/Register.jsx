@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import { useContext, useNavigate } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "./AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 
 
 const Register = () => {
     const {createUser, signInWithGoogle} = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
     
     const handleGoogleSignIn = () => {
         signInWithGoogle()
@@ -18,6 +20,20 @@ const Register = () => {
         const name = e.target.name.value;
         const password = e.target.password.value;
         console.log(name, email, password);
+        setRegisterError('');
+        if(password.length < 6){
+            toast.warning('Password should be 6 character or longer')
+            return;
+          }
+  
+          else if(!/[A-Z]/.test(password)){
+            toast.warning('Your password should have at least one upper class character ');
+            return;
+          }
+          else if(!/[!@#$%^&*]/.test(password)){
+            toast.warning('Your password should have at least one special character');
+            return;
+          }
         createUser(email, password)
         .then(result => {
               console.log(result.user)
@@ -58,7 +74,9 @@ const Register = () => {
           <p>Sign in with <button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button></p>
         </div>
         <p>Already have an account? Please <Link to='/login'><button className="btn text-dark btn-link">Login</button></Link></p>
+       
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   </div>
 </div>

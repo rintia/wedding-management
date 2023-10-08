@@ -1,15 +1,12 @@
 import { AuthContext } from "./AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const {signInUser, signInWithGoogle} = useContext(AuthContext)
+    const {signInUser} = useContext(AuthContext)
     const navigate = useNavigate()
-    //   const handleGoogleSignIn = () => {
-    //     signInWithGoogle()
-    //     .then(result => console.log(result.user))
-    //     .catch(error => console.error(error))
-    //   }
       const handleLogin = e => {
           e.preventDefault();
           const email = e.target.email.value;
@@ -17,6 +14,7 @@ const Login = () => {
           console.log(email, password)
           signInUser(email, password)
           .then(result=> {
+            toast('Successfully toasted!')
             console.log(result.user)
             e.target.reset();
             navigate('/')
@@ -47,11 +45,14 @@ const Login = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn border-none bg-dark text-light hover:bg-[#911F27] btn-primary">Login</button>
+          <ToastContainer></ToastContainer>
         </div>
         <p>New here? Please <Link to='/register'><button className="btn btn-link text-dark">Register</button></Link></p>
       </form>
     </div>
+  
   </div>
+
 </div>
     );
 };
