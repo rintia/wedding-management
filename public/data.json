@@ -1,0 +1,171 @@
+[
+    {
+      "id": 1,
+      "name": "Wedding Venues",
+      "image": "wedding_venues.jpg",
+      "short_description": "Charming venues for your big day. Perfect settings for your dream wedding.",
+      "price": 3500,
+      "service_details": "Choose from a variety of stunning wedding venues to create cherished memories with your loved ones.",
+      "detail_images": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg",
+        "image4.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "John Smith",
+          "customer_image": "john_smith.jpg",
+          "review_title": "Absolutely Perfect!",
+          "review_description": "Flawless venue selection. Everything was perfect."
+        },
+        {
+          "customer_name": "Emily Davis",
+          "customer_image": "emily_davis.jpg",
+          "review_title": "Highly Recommend",
+          "review_description": "Exceptional venue choices. Couldn't be happier."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Wedding Catering",
+      "image": "wedding_catering.jpg",
+      "short_description": "Delicious cuisine for your guests. Memorable dining experiences.",
+      "price": 2500,
+      "service_details": "Customizable catering menu to satisfy your guests' palates and create lasting culinary memories.",
+      "detail_images": [
+        "image5.jpg",
+        "image6.jpg",
+        "image7.jpg",
+        "image8.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "Jennifer Lee",
+          "customer_image": "jennifer_lee.jpg",
+          "review_title": "Fantastic Food",
+          "review_description": "Incredible wedding food. Our guests loved it!"
+        },
+        {
+          "customer_name": "Robert Clark",
+          "customer_image": "robert_clark.jpg",
+          "review_title": "Top-Notch Service",
+          "review_description": "Catering team exceeded expectations. Highly satisfied."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Wedding Photography",
+      "image": "wedding_photography.jpg",
+      "short_description": "Capture memories with style. Beautifully preserved moments.",
+      "price": 1500,
+      "service_details": "Full-day coverage and beautifully edited wedding photos to cherish for a lifetime.",
+      "detail_images": [
+        "image9.jpg",
+        "image10.jpg",
+        "image11.jpg",
+        "image12.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "Sarah Johnson",
+          "customer_image": "sarah_johnson.jpg",
+          "review_title": "Amazing Photographer",
+          "review_description": "Stunning wedding photos. Thank you for the memories."
+        },
+        {
+          "customer_name": "David Miller",
+          "customer_image": "david_miller.jpg",
+          "review_title": "Talented and Professional",
+          "review_description": "Captured every emotion of our day. Highly recommended."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Floral Arrangements",
+      "image": "floral_arrangements.jpg",
+      "short_description": "Elegant flowers for your wedding. Stunning floral creations.",
+      "price": 800,
+      "service_details": "Custom floral designs to match your theme and colors, creating a visually breathtaking atmosphere.",
+      "detail_images": [
+        "image13.jpg",
+        "image14.jpg",
+        "image15.jpg",
+        "image16.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "Linda Thompson",
+          "customer_image": "linda_thompson.jpg",
+          "review_title": "Gorgeous Flowers",
+          "review_description": "Highlight of our wedding. Stunning work!"
+        },
+        {
+          "customer_name": "Michael Harris",
+          "customer_image": "michael_harris.jpg",
+          "review_title": "Exceeded Expectations",
+          "review_description": "Beyond beautiful floral arrangements. Many compliments."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Wedding Makeup",
+      "image": "wedding_makeup.jpg",
+      "short_description": "Flawless makeup for brides. Enhance your natural beauty.",
+      "price": 1200,
+      "service_details": "Professional makeup artists to enhance your beauty on your big day, ensuring you look radiant.",
+      "detail_images": [
+        "image17.jpg",
+        "image18.jpg",
+        "image19.jpg",
+        "image20.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "Sophia Turner",
+          "customer_image": "sophia_turner.jpg",
+          "review_title": "Perfect Bridal Makeup",
+          "review_description": "Absolutely flawless bridal makeup. Loved it!"
+        },
+        {
+          "customer_name": "Daniel Wilson",
+          "customer_image": "daniel_wilson.jpg",
+          "review_title": "Highly Skilled Artists",
+          "review_description": "Talented makeup artists. They made me look stunning."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Wedding Attire",
+      "image": "wedding_attire.jpg",
+      "short_description": "Elegant attire for your special day. Beautiful wedding fashion.",
+      "price": 1800,
+      "service_details": "Designer wedding attire for brides, grooms, and bridal parties, ensuring you look your best.",
+      "detail_images": [
+        "image21.jpg",
+        "image22.jpg",
+        "image23.jpg",
+        "image24.jpg"
+      ],
+      "reviews": [
+        {
+          "customer_name": "Olivia Adams",
+          "customer_image": "olivia_adams.jpg",
+          "review_title": "Beautiful Wedding Gowns",
+          "review_description": "Found the perfect wedding gown here. It was stunning!"
+        },
+        {
+          "customer_name": "Matthew Collins",
+          "customer_image": "matthew_collins.jpg",
+          "review_title": "Quality Tuxedos",
+          "review_description": "Quality wedding tuxedos for the groomsmen. Excellent service."
+        }
+      ]
+    }
+  ]
+  
