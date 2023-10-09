@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
@@ -8,11 +8,13 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const {createUser, signInWithGoogle} = useContext(AuthContext);
+    const navigate = useNavigate();
    
     
     const handleGoogleSignIn = () => {
         signInWithGoogle()
         .then(() => {
+          navigate('/'),
           toast.success('Registered Successfully')
         })
         .catch(error => console.error(error))
@@ -46,6 +48,7 @@ const Register = () => {
                 photoURL: photo
               })
               .then(() => location.reload(),
+              navigate('/'),
               toast.success('Registered Successfully')
               
               )

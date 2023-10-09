@@ -10,3 +10,4 @@ Website Features:
     7. clicking the photo user name and logout button are shown.
     8. when clicked logout, user is logged out.
     9. In the homepage, Services section have various cards. when clicked on the view details of a card it redirects to a new page of the service details.
+    10. In the Home page About Us section fades to the right when scrolled down.
