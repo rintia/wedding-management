@@ -70,8 +70,12 @@ const Header = () => {
    
     :
      <div className="md:flex ">
-      <Link to='/login'><h1 className="text-dark font-semibold mr-4" href="">Login</h1></Link>
-     <Link to='/register'><h1 className="text-dark font-semibold" href="">Register</h1></Link>
+      <NavLink style={({ isActive }) => ({
+            textDecoration : isActive ? 'underline' : 'none'
+            })} to='/login'><h1 className="text-dark font-semibold mr-4" href="">Login</h1></NavLink>
+     <NavLink style={({ isActive }) => ({
+            textDecoration : isActive ? 'underline' : 'none'
+            })}to='/register'><h1 className="text-dark font-semibold" href="">Register</h1></NavLink>
      </div>
     }
    
