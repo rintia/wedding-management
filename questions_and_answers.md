@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: {}
 
-<i>Write your explanation here</i>
+<i>the value of 'greeting' is an empty object. so when greeting is console log it shows an empty object</i>
 
 </p>
 </details>
