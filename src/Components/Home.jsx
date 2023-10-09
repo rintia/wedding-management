@@ -5,6 +5,8 @@ import Card from "./Card";
 import Footer from "./Footer";
 import FAQ from "./FAQ";
 import AboutUs from "./AboutUs";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 
 
@@ -15,6 +17,10 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setCards(data))
     }, [])
+
+    useEffect(()=> {
+        Aos.init({duration:500})
+    },[])
     
     return (
         <div>
@@ -25,7 +31,10 @@ const Home = () => {
                 cards.map(card => <Card key={card.id} card={card}></Card>)
             }
            </div>
+           <div className="px-12" data-aos='fade-right'>
            <AboutUs></AboutUs>
+           </div>
+          
            <FAQ></FAQ>
             <Footer></Footer>
         </div>

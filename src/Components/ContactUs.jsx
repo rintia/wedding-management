@@ -3,7 +3,7 @@ import { BiChat } from 'react-icons/bi';
 
 const ContactUs = () => {
     return (
-        <div className="border-t">
+        <div className="border-t ">
             <h1 className="text-4xl font-semibold text-center pt-4 text-dark my-12"> Contact Us </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-screen-xl mx-auto text-center mb-8 px-4">
                 <div className='border-b md:border-none'>
