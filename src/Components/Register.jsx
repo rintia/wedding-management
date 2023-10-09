@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 
 
@@ -17,6 +18,7 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         const email = e.target.email.value;
+        const photo = e.target.photo.value;
         const name = e.target.name.value;
         const password = e.target.password.value;
         console.log(name, email, password);
@@ -35,8 +37,17 @@ const Register = () => {
           }
         createUser(email, password)
         .then(result => {
-            toast.success('Registered Successfully')
+           
               console.log(result.user)
+              updateProfile(result.user,{
+                displayName: name,
+                photoURL: photo
+              })
+              .then(() => location.reload(),
+              toast.success('Registered Successfully')
+              
+              )
+              .catch(error => console.error(error))
             
         })
         .catch(error=> 
@@ -61,7 +72,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Your Photo</span>
           </label>
-          <input type="text" name="name" placeholder="your photo url" className="input input-bordered" />
+          <input type="text" name="photo" placeholder="your photo url" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">

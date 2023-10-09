@@ -48,13 +48,15 @@ const Header = () => {
   </div>
   <div className="navbar-end">
     { user ? 
-     <div className="flex items-center">
+     <div className="flex gap-2">
+      <div className="flex items-center border-2 rounded-lg px-2">
       <h1>{user.displayName}</h1>
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
      <div className="w-10 rounded-full">
        <img src={user.photoURL} />
      </div>
    </label>
+      </div>
    <a onClick={handleLogOut} className="btn">Sign Out</a> 
    </div> 
    
