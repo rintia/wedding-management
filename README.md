@@ -1,5 +1,5 @@
 Website Name: Wedding Knot
-Live Link:
+Live Link: https://wedding-plaaner-auh.web.app/
 Website Features:
     1. User can toggle between Login page and Registration page.
     2. If logged in successfully a toast is shown.
