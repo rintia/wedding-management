@@ -15,7 +15,7 @@ const Register = () => {
         signInWithGoogle()
         .then(() => {
           navigate('/'),
-          toast.success('Registered Successfully')
+          toast.success('Sign in Successful')
         })
         .catch(error => console.error(error))
       }

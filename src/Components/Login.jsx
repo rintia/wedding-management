@@ -5,10 +5,19 @@ import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser, signInWithGoogle} = useContext(AuthContext);
     const location = useLocation();
     console.log('location in the login page', location)
     const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+      signInWithGoogle()
+      .then(() => {
+        navigate('/'),
+        toast.success('Sign in Successful')
+      })
+      .catch(error => console.error(error))
+    }
     
       const handleLogin = e => {
           e.preventDefault();
@@ -24,8 +33,8 @@ const Login = () => {
             
           })
           .catch(error =>{
-            console.error(error)
-            toast.warning(error.message)
+            console.log(error)
+            toast.warning('Invalid Email or Password')
         })
 
       }
@@ -52,6 +61,8 @@ const Login = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn border-none bg-dark text-light hover:bg-[#911F27] btn-primary">Login</button>
+          <p className="text-center mt-4">Or</p>
+          <p className="text-center">Sign in with <button onClick={handleGoogleSignIn} className="btn text-dark btn-link">Google</button></p>
           <ToastContainer></ToastContainer>
         </div>
         <p>New here? Please <Link to='/register'><button className="btn btn-link text-dark">Register</button></Link></p>
