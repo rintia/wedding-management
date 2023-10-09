@@ -5,6 +5,7 @@ import { useContext } from "react";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext)
+  console.log(user);
     const navLinks = <>
      <li> <NavLink style={({ isActive }) => ({
             color: isActive ? "#630A10" : 'black',
@@ -14,11 +15,11 @@ const Header = () => {
     <li><NavLink style={({ isActive }) => ({
             color: isActive ? "#630A10" : 'black',
             background: isActive ? '#FCF0C8' : 'white'
-            })} to='/login'>login</NavLink></li>
+            })} to='/reviews'>Reviews</NavLink></li>
     <li><NavLink style={({ isActive }) => ({
             color: isActive ? "#630A10" : 'black',
             background: isActive ? '#FCF0C8' : 'white'
-            })} to='/register'>Register</NavLink></li>
+            })} to='/contactUs'>Contact Us</NavLink></li>
     </>
     const handleLogOut =() => {
       logOut()

@@ -14,6 +14,9 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import AuthProvider from './Components/AuthProvider';
 import PrivateRoute from './Components/routes/PrivateRoute';
+import Reviews from './Components/Reviews';
+import ContactUs from './Components/ContactUs';
+
 
 
 const router = createBrowserRouter([
@@ -39,6 +42,15 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/reviews',
+        element: <Reviews></Reviews>,
+        loader: () => fetch('/data.json')
+      },
+      {
+        path: '/contactUs',
+        element: <ContactUs></ContactUs>
       }
      
     ]

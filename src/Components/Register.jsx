@@ -12,7 +12,9 @@ const Register = () => {
     
     const handleGoogleSignIn = () => {
         signInWithGoogle()
-        .then(result => console.log(result.user))
+        .then(() => {
+          toast.success('Registered Successfully')
+        })
         .catch(error => console.error(error))
       }
     const handleRegister = e => {
@@ -88,7 +90,8 @@ const Register = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn border-none bg-dark text-light hover:bg-[#911F27] btn-primary">Register</button>
-          <p>Sign in with <button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button></p>
+          <p className="text-center mt-4">Or</p>
+          <p className="text-center">Sign in with <button onClick={handleGoogleSignIn} className="btn text-dark btn-link">Google</button></p>
         </div>
         <p>Already have an account? Please <Link to='/login'><button className="btn text-dark btn-link">Login</button></Link></p>
        
