@@ -39,7 +39,7 @@ const Header = () => {
     </div>
     <div className="flex">
     <img src="/logo.png" className="w-16" alt="" />
-    <a className="btn btn-ghost font-cursive font-bold normal-case text-dark text-4xl">Wedding Knot</a>
+    <Link to='/'><a className="btn btn-ghost font-cursive font-bold normal-case text-dark text-4xl">Wedding Knot</a></Link>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
