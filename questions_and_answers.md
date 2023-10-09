@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: '12'
 
-<i>Write your explanation here</i>
+<i>Here the value of a is a number and the value of b is a string. when a number and a string are added the result is always string. So 1+'2' = '12'</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>The original array food is not modified. So when food is cosole.log it show the previous value of food.</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: 'Hi there, undefined'
 
-<i>Write your explanation here</i>
+<i>Here sayHi is a function that takes one parameter, name. But when the sayHi function is called, no parameters are passed. So in the place of name it shows undefined.</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3
 
-<i>Write your explanation here</i>
+<i>Here nums is an array of four element. Where three of them have truthy values(1,2,3) and one of them has a falsy value(0). So in the if condition three of them are true. So count is incremented three times. Hence the answer is 3.</i>
 
 </p>
 </details>
