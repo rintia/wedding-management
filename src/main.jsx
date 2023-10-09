@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/reviews',
-        element: <Reviews></Reviews>,
+        element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
         loader: () => fetch('/data.json')
       },
       {
         path: '/contactUs',
-        element: <ContactUs></ContactUs>
+        element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
       }
      
     ]
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
      <AuthProvider>
-     <RouterProvider router={router} />
+        <RouterProvider router={router} />
      </AuthProvider>
   </React.StrictMode>,
 )
