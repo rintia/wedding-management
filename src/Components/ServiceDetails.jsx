@@ -9,9 +9,9 @@ const ServiceDetails = () => {
     const detail = details.find(detail => detail.id == idInt);
     const { name, image, detail_images, service_details, price, reviews } = detail;
     return (
-        <div className="mt-12 max-w-screen-xl mx-auto">
-            <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-2 rounded-xl grid grid-cols-2 gap-2">
+        <div className="mt-12 max-w-screen-xl mx-auto px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2 rounded-xl grid grid-cols-2 gap-2">
                     <div className="row-span-2"><img className="h-full" src={image} alt="" /></div>
                     <div><img className="h-full" src={detail_images[0]} alt="" /></div>
                     <div><img className="h-full" src={detail_images[1]} alt="" /></div>
